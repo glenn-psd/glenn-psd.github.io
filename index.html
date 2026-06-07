@@ -1,10 +1,1435 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Glenn's Website</title>
-</head>
-<body>
-  <h1>Hello World!</h1>
-  <p>Welcome to my first GitHub Pages site.</p>
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Product Designer Tayhoon Kim portfolio profile and experience"
+    />
+    <title>Tayhoon Kim | Product Designer</title>
+    <style>
+      @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+      :root {
+        --background: #0d0d0e;
+        --label-primary: #f5f5f5;
+        --label-secondary: #ababab;
+        --label-tertiary: #777777;
+        --line-primary: #383838;
+        --line-secondary: #222222;
+        --mobile-line: #262626;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: var(--background);
+        color: var(--label-primary);
+        font-family:
+          "Pretendard",
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          "Apple SD Gothic Neo",
+          "Noto Sans KR",
+          sans-serif;
+      }
+
+      a,
+      button {
+        color: inherit;
+        font: inherit;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      button {
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+      }
+
+      p,
+      h2,
+      ul {
+        margin: 0;
+      }
+
+      .page {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 160px;
+        padding: 32px 40px 40px;
+        background: var(--background);
+      }
+
+      .site-header {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        line-height: 1.2;
+        white-space: nowrap;
+      }
+
+      .profile {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+
+      .profile-name {
+        color: var(--label-primary);
+        font-size: clamp(88px, 9.375vw, 120px);
+        font-weight: 700;
+        line-height: 1.2;
+      }
+
+      .profile-role {
+        color: var(--label-secondary);
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.2;
+      }
+
+      .header-actions {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+        gap: 20px;
+      }
+
+      .nav {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+        gap: 30px;
+        color: var(--label-secondary);
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.2;
+      }
+
+      .nav a[aria-current="page"] {
+        color: var(--label-primary);
+      }
+
+      .header-separator {
+        width: 1px;
+        height: 8px;
+        margin-top: 7px;
+        background: var(--line-primary);
+      }
+
+      .language-toggle {
+        padding: 0;
+        color: var(--label-secondary);
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.2;
+      }
+
+      .sticky-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 20;
+        width: 100%;
+        padding: 18px 40px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        background: rgba(13, 13, 14, 0.88);
+        backdrop-filter: blur(16px);
+        color: var(--label-primary);
+        line-height: 1.2;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-12px);
+        transition:
+          opacity 180ms ease,
+          transform 180ms ease,
+          visibility 180ms ease;
+        visibility: hidden;
+      }
+
+      .has-sticky-header .sticky-header {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+        visibility: visible;
+      }
+
+      .sticky-brand {
+        display: flex;
+        align-items: flex-start;
+        gap: 4px;
+        color: var(--label-primary);
+        font-size: 18px;
+        font-weight: 400;
+        white-space: nowrap;
+      }
+
+      .sticky-brand span:nth-child(-n + 2) {
+        color: var(--label-secondary);
+      }
+
+      .sticky-actions {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+        gap: 20px;
+        white-space: nowrap;
+      }
+
+      .sticky-about,
+      .sticky-language-toggle {
+        padding: 0;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.2;
+      }
+
+      .sticky-about {
+        color: var(--label-primary);
+      }
+
+      .sticky-language-toggle {
+        color: var(--label-secondary);
+      }
+
+      .sticky-separator {
+        width: 1px;
+        height: 8px;
+        margin-top: 7px;
+        background: var(--line-primary);
+      }
+
+      .content {
+        width: 100%;
+        max-width: 800px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 120px;
+      }
+
+      .intro {
+        width: 100%;
+        min-height: 264px;
+        color: var(--label-primary);
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.44;
+        word-break: keep-all;
+      }
+
+      .external-link {
+        color: inherit;
+        text-decoration: none;
+        text-underline-offset: 3px;
+      }
+
+      .external-link:hover,
+      .external-link:focus-visible {
+        text-decoration: underline;
+      }
+
+      .intro-link {
+        font-weight: 700;
+      }
+
+      .experience {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+      }
+
+      .site-footer {
+        width: 100%;
+        color: var(--label-tertiary);
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 1.4;
+        text-align: center;
+      }
+
+      .experience-head {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        line-height: 1.4;
+      }
+
+      .section-title {
+        flex: 1 1 0;
+        min-width: 0;
+        color: var(--label-primary);
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      .updated-at {
+        flex: 0 0 auto;
+        color: var(--label-tertiary);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.4;
+        white-space: nowrap;
+      }
+
+      .experience-list {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 44px;
+      }
+
+      .divider {
+        width: 100%;
+        height: 1px;
+        flex: 0 0 auto;
+        background: var(--line-secondary);
+      }
+
+      .divider:first-child {
+        background: var(--line-primary);
+      }
+
+      .job {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        gap: 30px;
+        padding-right: 40px;
+        font-size: 15px;
+        font-weight: 400;
+      }
+
+      .company {
+        flex: 1 1 0;
+        max-width: 240px;
+        min-width: 0;
+        line-height: 1.4;
+        white-space: nowrap;
+      }
+
+      .company-name {
+        color: var(--label-primary);
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.4;
+      }
+
+      .role-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        margin-top: 8px;
+        color: var(--label-secondary);
+        line-height: 1.4;
+      }
+
+      .job-details {
+        flex: 1 1 0;
+        min-width: 0;
+        color: var(--label-primary);
+      }
+
+      .project-list {
+        padding-left: 22.5px;
+        color: var(--label-primary);
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.54;
+      }
+
+      .project-list li + li {
+        margin-top: 16px;
+      }
+
+      .extra-projects {
+        display: grid;
+        grid-template-rows: 0fr;
+        margin-top: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition:
+          grid-template-rows 260ms ease,
+          margin-top 260ms ease,
+          opacity 180ms ease;
+      }
+
+      .extra-projects.is-open {
+        grid-template-rows: 1fr;
+        margin-top: 16px;
+        opacity: 1;
+      }
+
+      .extra-projects-inner {
+        min-height: 0;
+        overflow: hidden;
+      }
+
+      .more {
+        display: block;
+        margin-top: 20px;
+        padding: 0 0 0 20px;
+        color: var(--label-secondary);
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.54;
+        text-align: left;
+        transition: color 160ms ease;
+      }
+
+      .more:hover,
+      .more:focus-visible {
+        color: var(--label-primary);
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .extra-projects,
+        .more,
+        .sticky-header {
+          transition: none;
+        }
+      }
+
+      @media (max-width: 800px) {
+        .page {
+          gap: clamp(96px, 15vw, 128px);
+          padding: 28px clamp(20px, 5vw, 40px) 140px;
+        }
+
+        .profile-name {
+          font-size: clamp(56px, 10vw, 78px);
+        }
+
+        .header-actions {
+          gap: 16px;
+        }
+
+        .nav {
+          gap: 24px;
+        }
+
+        .content {
+          gap: clamp(88px, 14vw, 120px);
+          max-width: 100%;
+        }
+
+        .intro {
+          min-height: 240px;
+        }
+
+        .experience-list {
+          gap: 40px;
+        }
+
+        .job {
+          gap: 24px;
+          padding-right: 0;
+        }
+
+        .company {
+          max-width: 180px;
+        }
+
+        .company-name {
+          font-size: 19px;
+        }
+      }
+
+      @media (max-width: 720px) {
+        .profile-name {
+          font-size: clamp(44px, 8vw, 56px);
+        }
+
+        .nav {
+          gap: 22px;
+          font-size: 17px;
+        }
+
+        .language-toggle {
+          font-size: 17px;
+        }
+
+        .sticky-brand,
+        .sticky-about,
+        .sticky-language-toggle {
+          font-size: 17px;
+        }
+
+        .job {
+          gap: 20px;
+        }
+
+        .company {
+          max-width: 160px;
+        }
+
+        .project-list {
+          font-size: 14px;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .page {
+          display: block;
+          padding: 24px 20px 78px;
+        }
+
+        .site-header {
+          max-width: none;
+          min-height: 88px;
+          margin: 0 auto;
+          display: grid;
+          grid-template-columns: minmax(0, 1fr) auto;
+          column-gap: 20px;
+        }
+
+        .profile {
+          gap: 8px;
+        }
+
+        .profile-name {
+          font-size: clamp(24px, 6.4vw, 41px);
+          line-height: 1.2;
+        }
+
+        .profile-role {
+          color: #8f8f8f;
+          font-size: 15px;
+          line-height: 1.2;
+        }
+
+        .header-actions {
+          flex-direction: column;
+          align-items: flex-end;
+          gap: 12px;
+        }
+
+        .nav {
+          flex-direction: column;
+          align-items: flex-end;
+          gap: 12px;
+          color: #8f8f8f;
+          font-size: 20px;
+          line-height: 1.2;
+        }
+
+        .header-separator {
+          display: none;
+        }
+
+        .language-toggle {
+          color: #8f8f8f;
+          font-size: 15px;
+          line-height: 1.2;
+        }
+
+        .sticky-header {
+          padding: 24px 20px 16px;
+          display: grid;
+          grid-template-columns: minmax(0, 1fr) auto;
+          column-gap: 20px;
+        }
+
+        .sticky-brand {
+          min-width: 0;
+          font-size: 15px;
+          line-height: 1.2;
+          white-space: normal;
+        }
+
+        .sticky-actions {
+          flex-direction: column;
+          align-items: flex-end;
+          gap: 12px;
+        }
+
+        .sticky-about,
+        .sticky-language-toggle {
+          font-size: 15px;
+          line-height: 1.2;
+        }
+
+        .sticky-language-toggle {
+          color: #8f8f8f;
+        }
+
+        .sticky-separator {
+          display: none;
+        }
+
+        .content {
+          max-width: none;
+          margin: 38px auto 0;
+          gap: 78px;
+        }
+
+        .intro {
+          min-height: 300px;
+          color: var(--label-primary);
+          font-family:
+            "Inter",
+            "Pretendard",
+            -apple-system,
+            BlinkMacSystemFont,
+            "Segoe UI",
+            "Apple SD Gothic Neo",
+            "Noto Sans KR",
+            sans-serif;
+          font-size: 13px;
+          line-height: 1.55;
+        }
+
+        .experience {
+          display: block;
+        }
+
+        .experience-head {
+          align-items: flex-start;
+          line-height: 1.4;
+        }
+
+        .section-title {
+          font-family:
+            "Inter",
+            "Pretendard",
+            -apple-system,
+            BlinkMacSystemFont,
+            "Segoe UI",
+            "Apple SD Gothic Neo",
+            "Noto Sans KR",
+            sans-serif;
+          font-size: 11px;
+          line-height: 1.4;
+        }
+
+        .updated-at {
+          color: #8f8f8f;
+          font-size: 13px;
+          line-height: 1.5;
+        }
+
+        .experience-list {
+          display: block;
+        }
+
+        .divider {
+          background: var(--mobile-line);
+        }
+
+        .divider:first-child {
+          margin-top: 16px;
+          margin-bottom: 34px;
+          background: var(--mobile-line);
+        }
+
+        .job {
+          display: block;
+          padding-right: 0;
+          margin-bottom: 34px;
+          font-family:
+            "Inter",
+            "Pretendard",
+            -apple-system,
+            BlinkMacSystemFont,
+            "Segoe UI",
+            "Apple SD Gothic Neo",
+            "Noto Sans KR",
+            sans-serif;
+          font-size: 13px;
+        }
+
+        .job + .divider {
+          margin-bottom: 34px;
+        }
+
+        .company {
+          max-width: none;
+          white-space: normal;
+          line-height: 1.35;
+        }
+
+        .company-name {
+          font-size: 17px;
+          font-weight: 700;
+          line-height: 1.35;
+        }
+
+        .role-info {
+          gap: 0;
+          margin-top: 11px;
+          color: #8f8f8f;
+          font-size: 13px;
+          line-height: 1.5;
+        }
+
+        .job-details {
+          margin-top: 25px;
+        }
+
+        .project-list {
+          padding-left: 0;
+          list-style-position: inside;
+          font-size: 13px;
+          line-height: 1.55;
+        }
+
+        .project-list li + li {
+          margin-top: 20px;
+        }
+
+        .extra-projects.is-open {
+          margin-top: 28px;
+          padding-top: 20px;
+          border-top: 1px solid var(--mobile-line);
+        }
+
+        .more {
+          margin-top: 20px;
+          padding-left: 0;
+          color: #8f8f8f;
+          font-family:
+            "Inter",
+            "Pretendard",
+            -apple-system,
+            BlinkMacSystemFont,
+            "Segoe UI",
+            "Apple SD Gothic Neo",
+            "Noto Sans KR",
+            sans-serif;
+          font-size: 13px;
+          line-height: 1.5;
+        }
+
+        .site-footer {
+          margin-top: 78px;
+          font-size: 12px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sticky-header" aria-hidden="true">
+      <div class="sticky-brand" aria-label="Product Designer / Tayhoon Kim">
+        <span>Product Designer</span>
+        <span>/</span>
+        <span>Tayhoon Kim</span>
+      </div>
+      <div class="sticky-actions">
+        <a class="sticky-about" href="#about">About</a>
+        <span class="sticky-separator" aria-hidden="true"></span>
+        <button class="sticky-language-toggle" type="button"></button>
+      </div>
+    </div>
+
+    <main class="page">
+      <header class="site-header">
+        <div class="profile">
+          <p class="profile-name"></p>
+          <p class="profile-role"></p>
+        </div>
+        <div class="header-actions">
+          <nav class="nav" aria-label="Primary"></nav>
+          <span class="header-separator" aria-hidden="true"></span>
+          <button class="language-toggle" type="button"></button>
+        </div>
+      </header>
+
+      <div class="content">
+        <section class="intro" id="about" aria-label="About"></section>
+
+        <section class="experience" id="experience" aria-label="Experience">
+          <div class="experience-head">
+            <p class="section-title"></p>
+            <p class="updated-at"></p>
+          </div>
+          <div class="experience-list"></div>
+        </section>
+      </div>
+
+      <footer class="site-footer">© 2026 Tayhoon Kim</footer>
+    </main>
+
+    <script>
+      const content = {
+        ko: {
+          htmlLang: "ko",
+          title: "Tayhoon Kim | Product Designer",
+          meta: "프로덕트 디자이너 김태훈의 포트폴리오 프로필과 이력입니다.",
+          profile: {
+            name: "Tayhoon Kim",
+            role: "Product Designer",
+          },
+          nav: {
+            about: "About",
+            works: "Works",
+            language: "English",
+          },
+          intro: [
+            "안녕하세요.",
+            "프로덕트 디자이너 김태훈입니다.",
+            "",
+            "“보이는 것과 보이지 않는 것을 디자인합니다.”",
+            "",
+            "디자인 시스템과 AI 서비스의 UX/UI에 관심을 가지고 있습니다.",
+            "특히, 사용자 데이터의 맥락을 이해하고, 이를 기반으로 UX/UI를 개선하는 작업에 깊은 흥미를 갖고 있습니다.",
+            "",
+            "현재는 NC AI에서 Text to 3D AI 생성 서비스인 VARCO 3D를 개발하고 있습니다.",
+            "",
+            "아래에서 저의 이력을 확인하실 수 있습니다.",
+            "건강하고 행복하세요.",
+          ],
+          experience: {
+            title: "Experience",
+            updatedAt: "최근 수정: 2026.06.01",
+            more: "더보기",
+            collapse: "접기",
+            jobs: [
+              {
+                id: "nc-ai-current",
+                company: "NC AI",
+                role: "Product Designer",
+                date: "2025.02 - Present",
+                url: "nc-ai.com↗",
+                summaryProjects: [
+                  {
+                    name: "VARCO 3D",
+                    description:
+                      "3D 에셋 생성형 AI 프로덕트 UX/UI 설계 및 운영",
+                  },
+                  {
+                    name: "VARCO Design System",
+                    description:
+                      "NC AI 서비스 전반의 디자인 시스템 구축 및 운영",
+                  },
+                ],
+                extraProjects: [],
+              },
+              {
+                id: "nc-ai-past",
+                company: "NC",
+                role: "Product Designer",
+                date: "2022.06 - 2025.01",
+                url: "nc.com↗",
+                summaryProjects: [
+                  {
+                    name: "VARCO Text",
+                    description:
+                      "게임 제작 특화 Text-to-Text AI 서비스 UX/UI 설계",
+                  },
+                  {
+                    name: "AI 금융 서비스",
+                    description: "금융 AI 기반 MTS 앱 프로토타입 UX/UI 디자인",
+                  },
+                ],
+                extraProjects: [],
+              },
+              {
+                id: "webzen",
+                company: "Webzen",
+                role: "UX/UI Designer",
+                date: "2017.08 - 2022.05",
+                url: "company.webzen.com↗",
+                summaryProjects: [
+                  {
+                    name: "웹젠 커뮤니티 사이트",
+                    description: "모바일 게임 커뮤니티 플랫폼 구축 및 UX 개선",
+                  },
+                  {
+                    name: "샷온라인 EU 웹사이트 리뉴얼",
+                    description: "샷온라인 유럽 웹사이트 리뉴얼 UX/UI 디자인",
+                  },
+                ],
+                extraProjects: [
+                  {
+                    name: "Webzen Remote App",
+                    description: "데스크톱 게임 모바일 스트리밍 앱 UX/UI 설계",
+                  },
+                  {
+                    name: "동남아시아 결제 플랫폼",
+                    description: "동남아시아 시장 대상 결제 플랫폼 UX/UI 구축",
+                  },
+                  {
+                    name: "게임 가이드 웹사이트",
+                    description: "웹젠 게임 가이드 웹사이트 UX/UI 디자인",
+                  },
+                  {
+                    name: "마스터탱커 공식 웹사이트",
+                    description: "모바일 게임 마스터탱커 공식 웹사이트 구축",
+                  },
+                ],
+              },
+              {
+                id: "media4th-one",
+                company: "Media4th One",
+                role: "UI Designer",
+                date: "2014/09 - 2015.09",
+                url: "media4thone.co.kr↗",
+                summaryProjects: [
+                  {
+                    name: "SM엔터테인먼트 웹사이트 제안",
+                    description: "웹사이트 리뉴얼 제안 UI 디자인 단독 수행",
+                  },
+                  {
+                    name: "SM엔터테인먼트 웹사이트 제안 및 구축",
+                    description:
+                      "웹사이트 구축 프로젝트 서브페이지 디자인 수행",
+                  },
+                ],
+                extraProjects: [
+                  {
+                    name: "드래곤네스트 웹사이트",
+                    description: "브랜드 웹사이트 서브페이지 UI 디자인 수행",
+                  },
+                  {
+                    name: "르노삼성 웹사이트 리뉴얼 제안",
+                    description: "웹사이트 리뉴얼 제안 및 UI 리소스 제작",
+                  },
+                  {
+                    name: "파라다이스시티 웹사이트",
+                    description: "다국어 웹사이트 및 서브페이지 UX/UI 디자인",
+                  },
+                  {
+                    name: "KT&G 웹사이트 접근성 개선",
+                    description: "WCAG 2.0 기준 영문 사이트 접근성 개선 수행",
+                  },
+                ],
+              },
+            ],
+          },
+        },
+        en: {
+          htmlLang: "en",
+          title: "Tayhoon Kim | Product Designer",
+          meta: "Portfolio profile and professional experience of product designer Tayhoon Kim.",
+          profile: {
+            name: "Tayhoon Kim",
+            role: "Product Designer",
+          },
+          nav: {
+            about: "About",
+            works: "Works",
+            language: "Korean",
+          },
+          intro: [
+            "Hello.",
+            "I’m Tayhoon Kim, a product designer.",
+            "",
+            "“I design what is visible and what is not.”",
+            "",
+            "I’m interested in design systems and UX/UI for AI services.",
+            "I’m especially drawn to understanding the context behind user data and improving UX/UI based on it.",
+            "",
+            "I’m currently working at NC AI on VARCO 3D, a Text-to-3D AI generation service.",
+            "",
+            "You can find my experience below.",
+            "Stay healthy and happy.",
+          ],
+          experience: {
+            title: "Experience",
+            updatedAt: "Last updated: 2026.06.01",
+            more: "More projects",
+            collapse: "Less",
+            jobs: [
+              {
+                id: "nc-ai-current",
+                company: "NC AI",
+                role: "Product Designer",
+                date: "2025.02 - Present",
+                url: "nc-ai.com↗",
+                summaryProjects: [
+                  {
+                    name: "VARCO 3D",
+                    description:
+                      "UX/UI design and operation for a generative AI product for 3D assets",
+                  },
+                  {
+                    name: "VARCO Design System",
+                    description:
+                      "Built and operated the design system across NC AI services",
+                  },
+                ],
+                extraProjects: [],
+              },
+              {
+                id: "nc-ai-past",
+                company: "NC",
+                role: "Product Designer",
+                date: "2022.06 - 2025.01",
+                url: "nc.com↗",
+                summaryProjects: [
+                  {
+                    name: "VARCO Text",
+                    description:
+                      "UX/UI design for a Text-to-Text AI service specialized for game production",
+                  },
+                  {
+                    name: "AI Financial Service",
+                    description:
+                      "UX/UI design for an MTS app prototype powered by financial AI",
+                  },
+                ],
+                extraProjects: [],
+              },
+              {
+                id: "webzen",
+                company: "Webzen",
+                role: "UX/UI Designer",
+                date: "2017.08 - 2022.05",
+                url: "company.webzen.com↗",
+                summaryProjects: [
+                  {
+                    name: "Webzen Community Site",
+                    description:
+                      "Built a mobile game community platform and improved UX",
+                  },
+                  {
+                    name: "Shot Online EU Website Renewal",
+                    description:
+                      "UX/UI design for the Shot Online Europe website renewal",
+                  },
+                ],
+                extraProjects: [
+                  {
+                    name: "Webzen Remote App",
+                    description:
+                      "UX/UI design for a mobile streaming app for desktop games",
+                  },
+                  {
+                    name: "Southeast Asia Payment Platform",
+                    description:
+                      "UX/UI build for a payment platform targeting the Southeast Asian market",
+                  },
+                  {
+                    name: "Game Guide Website",
+                    description: "UX/UI design for Webzen game guide websites",
+                  },
+                  {
+                    name: "Master Tanker Official Website",
+                    description:
+                      "Official website build for the mobile game Master Tanker",
+                  },
+                ],
+              },
+              {
+                id: "media4th-one",
+                company: "Media4th One",
+                role: "UI Designer",
+                date: "2014/09 - 2015.09",
+                url: "media4thone.co.kr↗",
+                summaryProjects: [
+                  {
+                    name: "SM Entertainment Website Proposal",
+                    description:
+                      "Solo UI design for a website renewal proposal",
+                  },
+                  {
+                    name: "SM Entertainment Website Proposal and Build",
+                    description: "Subpage design for the website build project",
+                  },
+                ],
+                extraProjects: [
+                  {
+                    name: "Dragon Nest Website",
+                    description: "UI design for brand website subpages",
+                  },
+                  {
+                    name: "Renault Samsung Website Renewal Proposal",
+                    description:
+                      "Website renewal proposal and UI resource production",
+                  },
+                  {
+                    name: "Paradise City Website",
+                    description:
+                      "UX/UI design for multilingual website and subpages",
+                  },
+                  {
+                    name: "KT&G Website Accessibility Improvements",
+                    description:
+                      "Accessibility improvements for the English website based on WCAG 2.0",
+                  },
+                ],
+              },
+            ],
+          },
+        },
+      };
+
+      const allowedLangs = new Set(["ko", "en"]);
+      const expandableJobIds = new Set(["webzen", "media4th-one"]);
+      let expandedJobId = null;
+
+      let currentLang = resolveInitialLang();
+
+      const els = {
+        metaDescription: document.querySelector('meta[name="description"]'),
+        profileName: document.querySelector(".profile-name"),
+        profileRole: document.querySelector(".profile-role"),
+        nav: document.querySelector(".nav"),
+        languageToggle: document.querySelector(".language-toggle"),
+        stickyHeader: document.querySelector(".sticky-header"),
+        stickyLanguageToggle: document.querySelector(".sticky-language-toggle"),
+        intro: document.querySelector(".intro"),
+        sectionTitle: document.querySelector(".section-title"),
+        updatedAt: document.querySelector(".updated-at"),
+        experienceList: document.querySelector(".experience-list"),
+      };
+
+      function resolveInitialLang() {
+        const params = new URLSearchParams(window.location.search);
+        const urlLang = params.get("lang");
+        if (allowedLangs.has(urlLang)) {
+          localStorage.setItem("lang", urlLang);
+          return urlLang;
+        }
+
+        localStorage.setItem("lang", "en");
+        return "en";
+      }
+
+      function syncLangUrl(lang) {
+        const params = new URLSearchParams(window.location.search);
+        params.set("lang", lang);
+        const query = params.toString();
+        const nextUrl = `${window.location.pathname}?${query}${window.location.hash}`;
+        window.history.replaceState({}, "", nextUrl);
+      }
+
+      function setLanguage(lang) {
+        currentLang = lang;
+        localStorage.setItem("lang", lang);
+        syncLangUrl(lang);
+        render();
+      }
+
+      function createExternalLink(label, href, className = "") {
+        const link = document.createElement("a");
+        link.className = ["external-link", className].filter(Boolean).join(" ");
+        link.href = href;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.textContent = label;
+        return link;
+      }
+
+      const preferredEnglishUrls = {
+        "company.webzen.com": "https://company.webzen.com/en",
+        "nc-ai.com": "https://nc-ai.com/en",
+        "nc.com": "https://www.nc.com/",
+      };
+
+      function createHrefFromDisplayUrl(displayUrl) {
+        const cleanUrl = displayUrl.replace("↗", "").trim();
+        if (preferredEnglishUrls[cleanUrl]) {
+          return preferredEnglishUrls[cleanUrl];
+        }
+        if (/^https?:\/\//i.test(cleanUrl)) {
+          return cleanUrl;
+        }
+        return `https://${cleanUrl}`;
+      }
+
+      function createTextParagraph(text) {
+        const p = document.createElement("p");
+        if (text) {
+          const linkTarget = "VARCO 3D";
+          const linkIndex = text.indexOf(linkTarget);
+          if (linkIndex >= 0) {
+            p.append(document.createTextNode(text.slice(0, linkIndex)));
+            p.append(
+              createExternalLink(
+                `${linkTarget}↗`,
+                "https://3d.varco.ai/explore",
+                "intro-link",
+              ),
+            );
+            p.append(
+              document.createTextNode(
+                text.slice(linkIndex + linkTarget.length),
+              ),
+            );
+          } else {
+            p.textContent = text;
+          }
+        } else {
+          p.innerHTML = "&nbsp;";
+        }
+        return p;
+      }
+
+      function createProjectItem(project) {
+        const li = document.createElement("li");
+        li.append(document.createTextNode(project.name));
+        li.append(document.createElement("br"));
+        li.append(document.createTextNode(project.description));
+        return li;
+      }
+
+      function getToggleLabel(job, labels, isExpanded) {
+        return isExpanded
+          ? labels.collapse
+          : `${labels.more} (${job.extraProjects.length})`;
+      }
+
+      function renderNav(labels) {
+        els.nav.replaceChildren();
+
+        const about = document.createElement("a");
+        about.href = "#about";
+        about.setAttribute("aria-current", "page");
+        about.textContent = labels.about;
+
+        const works = document.createElement("a");
+        works.href = "#experience";
+        works.hidden = true;
+        works.textContent = labels.works;
+
+        els.nav.append(about, works);
+      }
+
+      function renderJob(job, labels) {
+        const isExpandable =
+          expandableJobIds.has(job.id) && job.extraProjects.length > 0;
+        const isExpanded = expandedJobId === job.id;
+
+        const article = document.createElement("article");
+        article.className = "job";
+        article.dataset.jobId = job.id;
+        article.classList.toggle("is-expanded", isExpanded);
+
+        const company = document.createElement("div");
+        company.className = "company";
+
+        const companyName = document.createElement("h2");
+        companyName.className = "company-name";
+        companyName.textContent = job.company;
+
+        const roleInfo = document.createElement("div");
+        roleInfo.className = "role-info";
+        [job.role, job.date].forEach((value) => {
+          const p = document.createElement("p");
+          p.textContent = value;
+          roleInfo.append(p);
+        });
+
+        const url = document.createElement("p");
+        url.append(
+          createExternalLink(job.url, createHrefFromDisplayUrl(job.url)),
+        );
+        roleInfo.append(url);
+
+        company.append(companyName, roleInfo);
+
+        const details = document.createElement("div");
+        details.className = "job-details";
+
+        const summaryList = document.createElement("ul");
+        summaryList.className = "project-list summary-projects";
+        job.summaryProjects.forEach((project) =>
+          summaryList.append(createProjectItem(project)),
+        );
+        details.append(summaryList);
+
+        if (isExpandable) {
+          const extra = document.createElement("div");
+          extra.className = "extra-projects";
+          extra.id = `extra-projects-${job.id}`;
+          extra.setAttribute("aria-hidden", String(!isExpanded));
+          if (isExpanded) {
+            extra.classList.add("is-open");
+          }
+
+          const extraInner = document.createElement("div");
+          extraInner.className = "extra-projects-inner";
+
+          const extraList = document.createElement("ul");
+          extraList.className = "project-list extra-project-list";
+          job.extraProjects.forEach((project) =>
+            extraList.append(createProjectItem(project)),
+          );
+
+          extraInner.append(extraList);
+          extra.append(extraInner);
+          details.append(extra);
+
+          const more = document.createElement("button");
+          more.className = "more";
+          more.type = "button";
+          more.dataset.jobId = job.id;
+          more.setAttribute("aria-expanded", String(isExpanded));
+          more.setAttribute("aria-controls", extra.id);
+          more.textContent = getToggleLabel(job, labels, isExpanded);
+          details.append(more);
+        }
+
+        article.append(company, details);
+        return article;
+      }
+
+      function renderExperience(data) {
+        els.sectionTitle.textContent = data.experience.title;
+        els.updatedAt.textContent = data.experience.updatedAt;
+        els.experienceList.replaceChildren();
+
+        data.experience.jobs.forEach((job, index) => {
+          const divider = document.createElement("div");
+          divider.className = "divider";
+          divider.setAttribute("aria-hidden", "true");
+          els.experienceList.append(divider, renderJob(job, data.experience));
+
+          if (index === data.experience.jobs.length - 1) {
+            return;
+          }
+        });
+      }
+
+      function findJobById(jobId) {
+        return content[currentLang].experience.jobs.find(
+          (job) => job.id === jobId,
+        );
+      }
+
+      function setJobExpandedState(jobId, isExpanded) {
+        const article = els.experienceList.querySelector(
+          `.job[data-job-id="${jobId}"]`,
+        );
+        const job = findJobById(jobId);
+        if (!article || !job) {
+          return;
+        }
+
+        const extra = article.querySelector(".extra-projects");
+        const button = article.querySelector(".more");
+        article.classList.toggle("is-expanded", isExpanded);
+
+        if (extra) {
+          extra.classList.toggle("is-open", isExpanded);
+          extra.setAttribute("aria-hidden", String(!isExpanded));
+        }
+
+        if (button) {
+          button.setAttribute("aria-expanded", String(isExpanded));
+          button.textContent = getToggleLabel(
+            job,
+            content[currentLang].experience,
+            isExpanded,
+          );
+        }
+      }
+
+      function toggleJob(jobId) {
+        const nextExpandedJobId = expandedJobId === jobId ? null : jobId;
+
+        if (expandedJobId && expandedJobId !== jobId) {
+          setJobExpandedState(expandedJobId, false);
+        }
+
+        setJobExpandedState(jobId, nextExpandedJobId === jobId);
+        expandedJobId = nextExpandedJobId;
+      }
+
+      function render() {
+        const data = content[currentLang];
+
+        document.documentElement.lang = data.htmlLang;
+        document.title = data.title;
+        els.metaDescription.content = data.meta;
+        els.profileName.textContent = data.profile.name;
+        els.profileRole.textContent = data.profile.role;
+        els.languageToggle.textContent = data.nav.language;
+        els.stickyLanguageToggle.textContent = data.nav.language;
+        els.languageToggle.setAttribute(
+          "aria-label",
+          currentLang === "ko" ? "Switch to English" : "Switch to Korean",
+        );
+        els.stickyLanguageToggle.setAttribute(
+          "aria-label",
+          currentLang === "ko" ? "Switch to English" : "Switch to Korean",
+        );
+
+        renderNav(data.nav);
+        els.intro.replaceChildren(...data.intro.map(createTextParagraph));
+        renderExperience(data);
+      }
+
+      function updateStickyHeader() {
+        const isScrolled = window.scrollY > 24;
+        document.body.classList.toggle("has-sticky-header", isScrolled);
+        els.stickyHeader.setAttribute("aria-hidden", String(!isScrolled));
+      }
+
+      function scrollToAbout(event) {
+        event.preventDefault();
+        const targetY =
+          els.intro.getBoundingClientRect().top + window.scrollY - 100;
+        window.scrollTo({
+          top: Math.max(0, targetY),
+          behavior: "smooth",
+        });
+      }
+
+      els.languageToggle.addEventListener("click", () => {
+        setLanguage(currentLang === "ko" ? "en" : "ko");
+      });
+
+      els.stickyLanguageToggle.addEventListener("click", () => {
+        setLanguage(currentLang === "ko" ? "en" : "ko");
+      });
+
+      els.nav.addEventListener("click", (event) => {
+        const link = event.target.closest('a[href="#about"]');
+        if (link) {
+          scrollToAbout(event);
+        }
+      });
+
+      document
+        .querySelector(".sticky-about")
+        .addEventListener("click", scrollToAbout);
+
+      els.experienceList.addEventListener("click", (event) => {
+        const button = event.target.closest(".more");
+        if (!button) {
+          return;
+        }
+
+        toggleJob(button.dataset.jobId);
+      });
+
+      window.addEventListener("popstate", () => {
+        currentLang = resolveInitialLang();
+        render();
+      });
+
+      window.addEventListener("scroll", updateStickyHeader, { passive: true });
+
+      syncLangUrl(currentLang);
+      render();
+      updateStickyHeader();
+    </script>
+  </body>
 </html>
