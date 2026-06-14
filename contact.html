@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Contact Tayhoon Kim" />
+    <title>Contact | Tayhoon Kim</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body class="page-contact">
+    <div class="page">
+      <header class="site-header" data-reveal="header">
+        <a class="brand" href="index.html" aria-label="Tayhoon Kim">TAYHOON KIM</a>
+        <nav class="global-nav" aria-label="Primary navigation">
+          <a href="index.html#about">About</a>
+          <a href="works.html" data-coming-soon>Works</a>
+          <a href="contact.html" aria-current="page">Contact</a>
+          <button class="language-link" type="button" aria-expanded="false" aria-controls="language-popup">
+            <span>Language</span>
+            <span class="language-icon" aria-hidden="true"></span>
+          </button>
+        </nav>
+        <div class="language-popup" id="language-popup" aria-label="Language" hidden>
+          <a href="#" lang="en">English</a>
+          <a href="#" lang="ko">&#54620;&#44397;&#50612;</a>
+        </div>
+      </header>
+      <main class="contact-main" aria-labelledby="contact-title">
+        <div class="contact-body">
+          <h1 class="contact-title" id="contact-title" data-reveal>Open to thoughtful projects and good conversations.</h1>
+          <div class="contact-list" aria-label="Contact">
+            <p class="contact-label" data-reveal>Contact</p>
+            <ul class="contact-links" data-reveal>
+              <li><a href="mailto:glenn@gmail.com" data-copy-email="glenn@gmail.com">glenn@gmail.com</a></li>
+              <li><a href="https://www.instagram.com/glenn_psd/" target="_blank" rel="noreferrer">Instagram</a></li>
+              <li><a href="https://www.linkedin.com/in/tayhoon-kim/" target="_blank" rel="noreferrer">Linkedin</a></li>
+            </ul>
+          </div>
+        </div>
+        <footer class="site-footer" data-reveal><span>&copy; 2026 Tayhoon Kim</span></footer>
+      </main>
+      <div class="copy-toast" role="status" aria-live="polite" hidden>Copied.</div>
+    </div>
+  </body>
+</html>
