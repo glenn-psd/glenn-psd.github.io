@@ -11,31 +11,65 @@
   <body class="page-works">
     <div class="page">
       <header class="site-header" data-reveal="header">
-        <a class="brand" href="index.html" aria-label="Tayhoon Kim">TAYHOON KIM</a>
-        <nav class="global-nav" aria-label="Primary navigation">
+        <a class="site-title" href="index.html" aria-label="Tayhoon Kim"
+          >TAYHOON KIM</a
+        >
+
+        <nav class="site-nav" aria-label="Primary navigation">
           <a href="index.html#about">About</a>
           <a href="works.html" aria-current="page" data-coming-soon>Works</a>
           <a href="contact.html">Contact</a>
-          <button class="language-link" type="button" aria-expanded="false" aria-controls="language-popup">
+          <button
+            class="language-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="language-menu"
+          >
             <span>Language</span>
             <span class="language-icon" aria-hidden="true"></span>
           </button>
         </nav>
-        <div class="language-popup" id="language-popup" aria-label="Language" hidden>
-          <a href="#" lang="en">English</a>
-          <a href="#" lang="ko">&#54620;&#44397;&#50612;</a>
+
+        <div
+          class="language-menu"
+          id="language-menu"
+          aria-label="Language"
+          hidden
+        >
+          <a href="?lang=en" lang="en" data-lang="en">English</a>
+          <a href="?lang=ko" lang="ko" data-lang="ko">&#54620;&#44397;&#50612;</a>
         </div>
       </header>
+
       <main class="works-main" aria-label="Works">
         <ul class="work-list">
-          <li class="work-card"><div class="work-thumb"></div><p class="work-title">ProjectTitle</p></li>
-          <li class="work-card"><div class="work-thumb"></div><p class="work-title">ProjectTitle</p></li>
-          <li class="work-card"><div class="work-thumb"></div><p class="work-title">ProjectTitle</p></li>
-          <li class="work-card"><div class="work-thumb"></div><p class="work-title">ProjectTitle</p></li>
-          <li class="work-card"><div class="work-thumb"></div><p class="work-title">ProjectTitle</p></li>
-          <li class="work-card"><div class="work-thumb"></div><p class="work-title">ProjectTitle</p></li>
+          <li class="work-item">
+            <div class="work-preview"></div>
+            <p class="work-name">ProjectTitle</p>
+          </li>
+          <li class="work-item">
+            <div class="work-preview"></div>
+            <p class="work-name">ProjectTitle</p>
+          </li>
+          <li class="work-item">
+            <div class="work-preview"></div>
+            <p class="work-name">ProjectTitle</p>
+          </li>
+          <li class="work-item">
+            <div class="work-preview"></div>
+            <p class="work-name">ProjectTitle</p>
+          </li>
+          <li class="work-item">
+            <div class="work-preview"></div>
+            <p class="work-name">ProjectTitle</p>
+          </li>
+          <li class="work-item">
+            <div class="work-preview"></div>
+            <p class="work-name">ProjectTitle</p>
+          </li>
         </ul>
       </main>
+
       <footer class="site-footer" data-reveal>
         <span>&copy; 2026 Tayhoon Kim</span>
         <a class="footer-contact" href="contact.html">Contact</a>
