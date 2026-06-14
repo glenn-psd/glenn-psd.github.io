@@ -11,96 +11,223 @@
   <body class="page-about">
     <div class="page">
       <header class="site-header" data-reveal="header">
-        <a class="brand" href="index.html" aria-label="Tayhoon Kim">TAYHOON KIM</a>
-        <nav class="global-nav" aria-label="Primary navigation">
+        <a class="site-title" href="index.html" aria-label="Tayhoon Kim"
+          >TAYHOON KIM</a
+        >
+
+        <nav class="site-nav" aria-label="Primary navigation">
           <a href="#about" aria-current="page">About</a>
           <a href="works.html" data-coming-soon>Works</a>
           <a href="contact.html">Contact</a>
-          <button class="language-link" type="button" aria-expanded="false" aria-controls="language-popup">
+          <button
+            class="language-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="language-menu"
+          >
             <span>Language</span>
             <span class="language-icon" aria-hidden="true"></span>
           </button>
         </nav>
-        <div class="language-popup" id="language-popup" aria-label="Language" hidden>
-          <a href="#" lang="en">English</a>
-          <a href="#" lang="ko">&#54620;&#44397;&#50612;</a>
+
+        <div
+          class="language-menu"
+          id="language-menu"
+          aria-label="Language"
+          hidden
+        >
+          <a href="?lang=en" lang="en" data-lang="en">English</a>
+          <a href="?lang=ko" lang="ko" data-lang="ko">&#54620;&#44397;&#50612;</a>
         </div>
       </header>
 
-      <main class="profile-main" id="about">
-        <section class="profile-copy" aria-label="Profile" data-reveal>
-          <p>Hello.<br />I&rsquo;m Tayhoon Kim, a product designer.</p>
+      <main class="about-main" id="about">
+        <section class="about-intro" aria-label="Profile" data-reveal>
+          <p>
+            Hello.<br />
+            I&rsquo;m Tayhoon Kim, a product designer.
+          </p>
           <p>&ldquo;I design what is visible and what is not.&rdquo;</p>
-          <p>I&rsquo;m interested in design systems and UX/UI for AI services.<br />I&rsquo;m especially drawn to understanding the context behind user data and improving UX/UI based on it.</p>
-          <p>I&rsquo;m currently working at NC AI on <a href="https://3d.varco.ai/explore" target="_blank" rel="noreferrer">VARCO 3D</a>, a Text-to-3D AI generation service.</p>
-          <p>You can find my experience below.<br />Stay healthy and happy.</p>
+          <p>
+            I&rsquo;m interested in design systems and UX/UI for AI services.<br />
+            I&rsquo;m especially drawn to understanding the context behind user
+            data and improving UX/UI based on it.
+          </p>
+          <p>
+            I&rsquo;m currently working at NC AI on
+            <a
+              href="https://3d.varco.ai/explore"
+              target="_blank"
+              rel="noopener noreferrer"
+              >VARCO 3D</a
+            >, a Text-to-3D AI generation service.
+          </p>
+          <p>
+            You can find my experience below.<br />
+            Stay healthy and happy.
+          </p>
         </section>
       </main>
 
-      <section class="experience" aria-labelledby="experience-title">
-        <h2 class="section-title" id="experience-title" data-scroll-reveal>Experience</h2>
-        <div class="experience-list">
-          <article class="experience-row">
-            <div class="company-info">
-              <h3 class="company-name">NC AI</h3>
-              <p class="company-meta">Product Designer<br />2025.02 - Present<br />nc-ai.com</p>
+      <section class="career" aria-labelledby="career-title">
+        <h2 class="section-title" id="career-title" data-scroll-reveal>
+          Experience
+        </h2>
+
+        <div class="career-list">
+          <article class="career-entry">
+            <div class="career-company">
+              <h3 class="career-company-name">NC AI</h3>
+              <p class="career-meta">
+                Product Designer<br />
+                2025.02 - Present<br />
+                <a href="https://nc-ai.com/en" target="_blank" rel="noopener noreferrer">nc-ai.com</a>
+              </p>
             </div>
-            <div class="project-info">
-              <div class="project">
-                <h4 class="project-title">VARCO 3D</h4>
-                <p class="project-description">UX/UI design and operation for a generative AI 3D asset creation product</p>
+            <div class="career-projects">
+              <div class="career-project">
+                <h4 class="career-project-title">VARCO 3D</h4>
+                <p class="career-project-description">
+                  UX/UI design and operation for a generative AI 3D asset
+                  creation product
+                </p>
               </div>
-              <div class="project">
-                <h4 class="project-title">VARCO Design System</h4>
-                <p class="project-description">Built and operated the design system across NC AI services</p>
+              <div class="career-project">
+                <h4 class="career-project-title">VARCO Design System</h4>
+                <p class="career-project-description">
+                  Built and operated the design system across NC AI services
+                </p>
               </div>
             </div>
           </article>
 
-          <article class="experience-row">
-            <div class="company-info">
-              <h3 class="company-name">NC</h3>
-              <p class="company-meta">Product Designer<br />2022.06 - 2025.01<br />nc.com</p>
+          <article class="career-entry">
+            <div class="career-company">
+              <h3 class="career-company-name">NC</h3>
+              <p class="career-meta">
+                Product Designer<br />
+                2022.06 - 2025.01<br />
+                <a href="https://www.nc.com/?locale=en-US" target="_blank" rel="noopener noreferrer">nc.com</a>
+              </p>
             </div>
-            <div class="project-info">
-              <div class="project">
-                <h4 class="project-title">VARCO Text</h4>
-                <p class="project-description">UX/UI design for a Text-to-Text AI service specialized for game production</p>
+            <div class="career-projects">
+              <div class="career-project">
+                <h4 class="career-project-title">VARCO Text</h4>
+                <p class="career-project-description">
+                  UX/UI design for a Text-to-Text AI service specialized for
+                  game production
+                </p>
               </div>
-              <div class="project">
-                <h4 class="project-title">AI Financial Service</h4>
-                <p class="project-description">UX/UI design for an MTS app prototype powered by financial AI</p>
+              <div class="career-project">
+                <h4 class="career-project-title">AI Financial Service</h4>
+                <p class="career-project-description">
+                  UX/UI design for an MTS app prototype powered by financial AI
+                </p>
               </div>
             </div>
           </article>
 
-          <article class="experience-row">
-            <div class="company-info">
-              <h3 class="company-name">Webzen</h3>
-              <p class="company-meta">UX/UI Designer<br />2017.08 - 2022.05<br />company.webzen.com</p>
+          <article class="career-entry">
+            <div class="career-company">
+              <h3 class="career-company-name">Webzen</h3>
+              <p class="career-meta">
+                UX/UI Designer<br />
+                2017.08 - 2022.05<br />
+                <a href="https://company.webzen.com/en" target="_blank" rel="noopener noreferrer">company.webzen.com</a>
+              </p>
             </div>
-            <div class="project-info">
-              <div class="project"><h4 class="project-title">Webzen Community Site</h4><p class="project-description">Built a mobile game community platform and improved UX</p></div>
-              <div class="project"><h4 class="project-title">Shot Online EU Website Renewal</h4><p class="project-description">UX/UI design for the Shot Online Europe website renewal</p></div>
-              <div class="project"><h4 class="project-title">Webzen Remote App</h4><p class="project-description">UX/UI design for a mobile desktop game streaming app</p></div>
-              <div class="project"><h4 class="project-title">Southeast Asia Payment Platform</h4><p class="project-description">Built UX/UI for a payment platform targeting Southeast Asian markets</p></div>
-              <div class="project"><h4 class="project-title">Game Guide Website</h4><p class="project-description">UX/UI design for Webzen game guide websites</p></div>
-              <div class="project"><h4 class="project-title">Master Tanker Official Website</h4><p class="project-description">Built the official website for the mobile game Master Tanker</p></div>
+            <div class="career-projects">
+              <div class="career-project">
+                <h4 class="career-project-title">Webzen Community Site</h4>
+                <p class="career-project-description">
+                  Built a mobile game community platform and improved UX
+                </p>
+              </div>
+              <div class="career-project">
+                <h4 class="career-project-title">Shot Online EU Website Renewal</h4>
+                <p class="career-project-description">
+                  UX/UI design for the Shot Online Europe website renewal
+                </p>
+              </div>
+              <div class="career-project">
+                <h4 class="career-project-title">Webzen Remote App</h4>
+                <p class="career-project-description">
+                  UX/UI design for a mobile desktop game streaming app
+                </p>
+              </div>
+              <div class="career-project">
+                <h4 class="career-project-title">Southeast Asia Payment Platform</h4>
+                <p class="career-project-description">
+                  Built UX/UI for a payment platform targeting Southeast Asian
+                  markets
+                </p>
+              </div>
+              <div class="career-project">
+                <h4 class="career-project-title">Game Guide Website</h4>
+                <p class="career-project-description">
+                  UX/UI design for Webzen game guide websites
+                </p>
+              </div>
+              <div class="career-project">
+                <h4 class="career-project-title">Master Tanker Official Website</h4>
+                <p class="career-project-description">
+                  Built the official website for the mobile game Master Tanker
+                </p>
+              </div>
             </div>
           </article>
 
-          <article class="experience-row">
-            <div class="company-info">
-              <h3 class="company-name">Media4th One</h3>
-              <p class="company-meta">UI Designer<br />2014/09 - 2015.09<br />media4thone.co.kr</p>
+          <article class="career-entry">
+            <div class="career-company">
+              <h3 class="career-company-name">Media4th One</h3>
+              <p class="career-meta">
+                UI Designer<br />
+                2014/09 - 2015.09<br />
+                <a href="https://www.media4thone.co.kr/" target="_blank" rel="noopener noreferrer">media4thone.co.kr</a>
+              </p>
             </div>
-            <div class="project-info">
-              <div class="project"><h4 class="project-title">SM Entertainment Website Proposal</h4><p class="project-description">Independently led UI design for a website renewal proposal</p></div>
-              <div class="project"><h4 class="project-title">Shot Online EU Website Renewal</h4><p class="project-description">Designed subpages for a website build project</p></div>
-              <div class="project"><h4 class="project-title">Dragon Nest Website</h4><p class="project-description">Designed UI for brand website subpages</p></div>
-              <div class="project"><h4 class="project-title">Renault Samsung Website Renewal Proposal</h4><p class="project-description">Developed a website renewal proposal and UI resources</p></div>
-              <div class="project"><h4 class="project-title">Paradise City Website</h4><p class="project-description">UX/UI design for a multilingual website and subpages</p></div>
-              <div class="project"><h4 class="project-title">KT&amp;G Website Accessibility Improvement</h4><p class="project-description">Improved accessibility of the English site to meet WCAG 2.0 standards</p></div>
+            <div class="career-projects">
+              <div class="career-project">
+                <h4 class="career-project-title">SM Entertainment Website Proposal</h4>
+                <p class="career-project-description">
+                  Independently led UI design for a website renewal proposal
+                </p>
+              </div>
+              <div class="career-project">
+                <h4 class="career-project-title">Shot Online EU Website Renewal</h4>
+                <p class="career-project-description">
+                  Designed subpages for a website build project
+                </p>
+              </div>
+              <div class="career-project">
+                <h4 class="career-project-title">Dragon Nest Website</h4>
+                <p class="career-project-description">
+                  Designed UI for brand website subpages
+                </p>
+              </div>
+              <div class="career-project">
+                <h4 class="career-project-title">
+                  Renault Samsung Website Renewal Proposal
+                </h4>
+                <p class="career-project-description">
+                  Developed a website renewal proposal and UI resources
+                </p>
+              </div>
+              <div class="career-project">
+                <h4 class="career-project-title">Paradise City Website</h4>
+                <p class="career-project-description">
+                  UX/UI design for a multilingual website and subpages
+                </p>
+              </div>
+              <div class="career-project">
+                <h4 class="career-project-title">
+                  KT&amp;G Website Accessibility Improvement
+                </h4>
+                <p class="career-project-description">
+                  Improved accessibility of the English site to meet WCAG 2.0
+                  standards
+                </p>
+              </div>
             </div>
           </article>
         </div>
