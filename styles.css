@@ -349,7 +349,7 @@ button {
 .work-list {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--work-row-gap, 80px) var(--work-column-gap, 40px);
+  gap: 80px 40px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -430,9 +430,7 @@ button {
   }
 
   .page-works {
-    --works-top: 86px;
-    --work-column-gap: 40px;
-    --work-row-gap: 80px;
+    --works-top: 95px;
   }
 
   .site-header {
@@ -540,19 +538,20 @@ button {
     letter-spacing: 0;
   }
 
-  .work-list {
-    grid-template-columns: 1fr;
-  }
-
   .work-name {
     font-size: 17px;
+    line-height: 1;
     letter-spacing: 0;
+  }
+
+  .work-list {
+    grid-template-columns: 1fr;
   }
 
   .site-footer {
     grid-template-columns: 1fr;
     gap: 18px;
-    padding-top: 132px;
+    padding-top: 140px;
     font-size: 24px;
   }
 }
@@ -574,8 +573,6 @@ button {
 
   .page-works {
     --works-top: 126px;
-    --work-column-gap: 40px;
-    --work-row-gap: 80px;
   }
 
   .site-nav {
@@ -625,13 +622,14 @@ button {
     font-size: 18px;
   }
 
-  .work-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .work-name {
     font-size: 18px;
+    line-height: 1.22;
     letter-spacing: 0;
+  }
+
+  .work-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .site-footer {
