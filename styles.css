@@ -1,8 +1,8 @@
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
 :root {
-  --background: #000000;
-  --label-primary: #ffffff;
+  --background: #000;
+  --label-primary: #fff;
   --label-tertiary: #868686;
   --surface-subtle: #242424;
   --page-x: 40px;
@@ -26,12 +26,12 @@ body {
   background: var(--background);
   color: var(--label-primary);
   font-family:
-    "Pretendard",
+    Pretendard,
     -apple-system,
     BlinkMacSystemFont,
-    "Segoe UI",
-    "Apple SD Gothic Neo",
-    "Noto Sans KR",
+    'Segoe UI',
+    'Apple SD Gothic Neo',
+    'Noto Sans KR',
     sans-serif;
 }
 
@@ -50,7 +50,6 @@ a[href]:hover {
 .site-header .site-title[href]:hover,
 .site-header .site-title[href]:focus-visible {
   text-decoration: none;
-  text-decoration-line: none;
 }
 
 button {
@@ -108,7 +107,6 @@ button {
 }
 
 .language-toggle {
-  gap: 4px;
   background: transparent;
   color: inherit;
   font: inherit;
@@ -117,61 +115,11 @@ button {
   cursor: pointer;
 }
 
-.language-icon {
-  width: 24px;
-  height: 24px;
-  flex: 0 0 24px;
-  background-color: currentColor;
-  mask: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10L12 15L17 10' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
-    center / contain no-repeat;
-}
-
-.language-menu {
-  position: absolute;
-  top: 60px;
-  left: var(--language-menu-x, 50%);
-  z-index: 3;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 111px;
-  height: 96px;
-  padding: 16px 0;
-  color: var(--label-primary);
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 1;
-  letter-spacing: 0;
-  opacity: 0;
-  pointer-events: none;
-  transform: translate(-50%, -4px);
-  transition:
-    opacity 320ms var(--motion-ease),
-    transform 320ms var(--motion-ease);
-  mix-blend-mode: difference;
-}
-
-.language-menu.is-open {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translate(-50%, 0);
-}
-
-.language-menu a {
-  display: block;
-  color: inherit;
-  white-space: nowrap;
-}
-
-.language-menu a + a {
-  margin-top: 24px;
-}
-
 [data-reveal] {
   animation: reveal-up var(--motion-duration) var(--motion-ease) both;
 }
 
-[data-reveal="header"] {
+[data-reveal='header'] {
   animation-name: reveal-header;
 }
 
@@ -199,6 +147,7 @@ button {
     opacity: 0;
     transform: translate3d(0, 16px, 0);
   }
+
   to {
     opacity: 1;
     transform: translate3d(0, 0, 0);
@@ -210,6 +159,7 @@ button {
     opacity: 0;
     transform: translate3d(0, -4px, 0);
   }
+
   to {
     opacity: 1;
     transform: translate3d(0, 0, 0);
@@ -399,8 +349,7 @@ button {
 .work-list {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  column-gap: var(--work-column-gap, 40px);
-  row-gap: var(--work-row-gap, 80px);
+  gap: var(--work-row-gap, 80px) var(--work-column-gap, 40px);
   margin: 0;
   padding: 0;
   list-style: none;
@@ -465,7 +414,7 @@ button {
   }
 }
 
-@media (max-width: 767px) {
+@media (width <= 767px) {
   :root {
     --page-x: 24px;
   }
@@ -523,18 +472,6 @@ button {
     margin-top: 0;
     font-size: 15px;
     letter-spacing: 0;
-  }
-
-  .language-menu {
-    width: 86px;
-    height: 84px;
-    padding: 14px 0;
-    font-size: 15px;
-    letter-spacing: 0;
-  }
-
-  .language-menu a + a {
-    margin-top: 20px;
   }
 
   .about-intro {
@@ -620,7 +557,7 @@ button {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1119px) {
+@media (width >= 768px) and (width <= 1119px) {
   :root {
     --page-x: 32px;
   }
