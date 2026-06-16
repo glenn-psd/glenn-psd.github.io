@@ -106,6 +106,10 @@ button {
   align-items: center;
 }
 
+.site-nav a[href]:hover {
+  text-decoration: none;
+}
+
 .language-toggle {
   background: transparent;
   color: inherit;
