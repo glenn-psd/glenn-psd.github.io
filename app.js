@@ -309,14 +309,11 @@
   const revealItems = document.querySelectorAll(selectors.revealItem);
   const revealGroups = document.querySelectorAll(selectors.revealGroup);
   if (revealItems.length) {
-    const syncRevealDelays = () => {
-      revealGroups.forEach((group) => {
-        group.querySelectorAll(selectors.groupedRevealItem).forEach((item, index) => {
-          item.style.setProperty('--reveal-delay', `${(index + 1) * 60}ms`);
-        });
+    revealGroups.forEach((group) => {
+      group.querySelectorAll(selectors.groupedRevealItem).forEach((item, index) => {
+        item.style.setProperty('--reveal-delay', `${(index + 1) * 60}ms`);
       });
-    };
-    syncRevealDelays();
+    });
     if (
       window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
       !('IntersectionObserver' in window)
@@ -333,21 +330,7 @@
         },
         { rootMargin: '0px 0px -14% 0px', threshold: 0.16 },
       );
-      const observeRevealItems = () => {
-        document.querySelectorAll(selectors.revealItem).forEach((item) => {
-          if (item.dataset.revealReady === 'true') return;
-          item.dataset.revealReady = 'true';
-          revealObserver.observe(item);
-        });
-      };
-      observeRevealItems();
-      if ('MutationObserver' in window) {
-        const groupObserver = new MutationObserver(() => {
-          syncRevealDelays();
-          observeRevealItems();
-        });
-        revealGroups.forEach((group) => groupObserver.observe(group, { childList: true }));
-      }
+      revealItems.forEach((item) => revealObserver.observe(item));
     }
   }
 
