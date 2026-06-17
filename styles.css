@@ -511,6 +511,11 @@ button {
     font-size: 17px;
   }
 
+  .career-company-name {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
   .career-project {
     margin-bottom: 28px;
   }
