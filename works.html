@@ -6,20 +6,25 @@
     <meta name="description" content="Tayhoon Kim work list" />
     <title>Works | Tayhoon Kim</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css?v=20260616" />
-    <script src="app.js?v=20260615" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20260813" />
+    <script type="module" src="app.js?v=20260813"></script>
   </head>
-  <body class="page-works">
+  <body class="page-works" data-page="works">
     <div class="page">
       <header class="site-header" data-reveal="header">
         <a class="site-title" href="index.html" aria-label="Tayhoon Kim">TAYHOON KIM</a>
 
         <nav class="site-nav" aria-label="Primary navigation">
-          <a href="index.html#about">About</a>
-          <a href="works.html" aria-current="page">Works</a>
-          <a href="contact.html">Contact</a>
-          <button class="language-toggle" type="button">
-            <span class="language-current">KR</span>
+          <a href="index.html#about" data-i18n="common.about">About</a>
+          <a href="works.html" aria-current="page" data-i18n="common.works">Works</a>
+          <a href="contact.html" data-i18n="common.contact">Contact</a>
+          <button
+            class="language-toggle"
+            type="button"
+            data-language-toggle
+            data-i18n-aria-label="common.switchLanguage"
+          >
+            <span class="language-current" data-i18n="common.language">KR</span>
           </button>
         </nav>
       </header>
@@ -29,49 +34,49 @@
           <li class="work-item">
             <a class="work-link" href="project_test.html">
               <div class="work-preview"></div>
-              <p class="work-name">ProjectTitle</p>
+              <p class="work-name" data-i18n="pages.works.projectTitle">ProjectTitle</p>
             </a>
           </li>
           <li class="work-item">
             <a class="work-link" href="project_test.html">
               <div class="work-preview"></div>
-              <p class="work-name">ProjectTitle</p>
+              <p class="work-name" data-i18n="pages.works.projectTitle">ProjectTitle</p>
             </a>
           </li>
           <li class="work-item">
             <a class="work-link" href="project_test.html">
               <div class="work-preview"></div>
-              <p class="work-name">ProjectTitle</p>
+              <p class="work-name" data-i18n="pages.works.projectTitle">ProjectTitle</p>
             </a>
           </li>
           <li class="work-item">
             <a class="work-link" href="project_test.html">
               <div class="work-preview"></div>
-              <p class="work-name">ProjectTitle</p>
+              <p class="work-name" data-i18n="pages.works.projectTitle">ProjectTitle</p>
             </a>
           </li>
           <li class="work-item">
             <a class="work-link" href="project_test.html">
               <div class="work-preview"></div>
-              <p class="work-name">ProjectTitle</p>
+              <p class="work-name" data-i18n="pages.works.projectTitle">ProjectTitle</p>
             </a>
           </li>
           <li class="work-item">
             <a class="work-link" href="project_test.html">
               <div class="work-preview"></div>
-              <p class="work-name">ProjectTitle</p>
+              <p class="work-name" data-i18n="pages.works.projectTitle">ProjectTitle</p>
             </a>
           </li>
           <li class="work-item">
             <a class="work-link" href="project_test.html">
               <div class="work-preview"></div>
-              <p class="work-name">ProjectTitle</p>
+              <p class="work-name" data-i18n="pages.works.projectTitle">ProjectTitle</p>
             </a>
           </li>
           <li class="work-item">
             <a class="work-link" href="project_test.html">
               <div class="work-preview"></div>
-              <p class="work-name">ProjectTitle</p>
+              <p class="work-name" data-i18n="pages.works.projectTitle">ProjectTitle</p>
             </a>
           </li>
         </ul>
@@ -79,7 +84,7 @@
 
       <footer class="site-footer" data-reveal>
         <span>&copy; 2026 Tayhoon Kim</span>
-        <a class="footer-contact" href="contact.html">Contact</a>
+        <a class="footer-contact" href="contact.html" data-i18n="common.contact">Contact</a>
       </footer>
     </div>
   </body>

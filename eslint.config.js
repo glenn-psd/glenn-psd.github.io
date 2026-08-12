@@ -1,18 +1,35 @@
 module.exports = [
   {
-    files: ['**/*.js'],
+    files: ['app.js', 'js/**/*.mjs'],
     ignores: ['node_modules/**'],
     languageOptions: {
       ecmaVersion: 'latest',
-      sourceType: 'script',
+      sourceType: 'module',
       globals: {
         window: 'readonly',
         document: 'readonly',
-        module: 'readonly',
         URL: 'readonly',
         URLSearchParams: 'readonly',
         IntersectionObserver: 'readonly',
+        CustomEvent: 'readonly',
         navigator: 'readonly',
+      },
+    },
+    rules: {
+      'no-unused-vars': ['warn', { caughtErrors: 'none' }],
+      'no-undef': 'error',
+    },
+  },
+  {
+    files: ['eslint.config.js', 'tests/**/*.js'],
+    ignores: ['node_modules/**'],
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'commonjs',
+      globals: {
+        __dirname: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
       },
     },
     rules: {

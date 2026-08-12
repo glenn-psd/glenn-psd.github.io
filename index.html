@@ -6,26 +6,36 @@
     <meta name="description" content="Tayhoon Kim product designer profile" />
     <title>Tayhoon Kim | Product Designer</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css?v=20260616" />
-    <script src="app.js?v=20260615" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20260813" />
+    <script type="module" src="app.js?v=20260813"></script>
   </head>
-  <body class="page-about">
+  <body class="page-about" data-page="about">
     <div class="page">
       <header class="site-header" data-reveal="header">
         <a class="site-title" href="index.html" aria-label="Tayhoon Kim">TAYHOON KIM</a>
 
         <nav class="site-nav" aria-label="Primary navigation">
-          <a href="#about" aria-current="page">About</a>
-          <a href="works.html">Works</a>
-          <a href="contact.html">Contact</a>
-          <button class="language-toggle" type="button">
-            <span class="language-current">KR</span>
+          <a href="#about" aria-current="page" data-i18n="common.about">About</a>
+          <a href="works.html" data-i18n="common.works">Works</a>
+          <a href="contact.html" data-i18n="common.contact">Contact</a>
+          <button
+            class="language-toggle"
+            type="button"
+            data-language-toggle
+            data-i18n-aria-label="common.switchLanguage"
+          >
+            <span class="language-current" data-i18n="common.language">KR</span>
           </button>
         </nav>
       </header>
 
       <main class="about-main" id="about">
-        <section class="about-intro" aria-label="Profile" data-reveal>
+        <section
+          class="about-intro"
+          aria-label="Profile"
+          data-reveal
+          data-i18n-html="pages.about.profile"
+        >
           <p>
             Hello.<br />
             I&rsquo;m Tayhoon Kim, a product designer.
@@ -50,10 +60,17 @@
       </main>
 
       <section class="career" aria-labelledby="career-title">
-        <h2 class="section-title" id="career-title" data-scroll-reveal>Experience</h2>
+        <h2
+          class="section-title"
+          id="career-title"
+          data-scroll-reveal
+          data-i18n="pages.about.careerTitle"
+        >
+          Experience
+        </h2>
 
         <div class="career-list">
-          <article class="career-entry">
+          <article class="career-entry" data-career="ncai">
             <div class="career-company">
               <h3 class="career-company-name">NC AI</h3>
               <p class="career-meta">
@@ -65,13 +82,13 @@
               </p>
             </div>
             <div class="career-projects">
-              <div class="career-project">
+              <div class="career-project" data-project="varco3d">
                 <h4 class="career-project-title">VARCO 3D</h4>
                 <p class="career-project-description">
                   UX/UI design and operation for a generative AI 3D asset creation product
                 </p>
               </div>
-              <div class="career-project">
+              <div class="career-project" data-project="designSystem">
                 <h4 class="career-project-title">VARCO Design System</h4>
                 <p class="career-project-description">
                   Built and operated the design system across NC AI services
@@ -80,7 +97,7 @@
             </div>
           </article>
 
-          <article class="career-entry">
+          <article class="career-entry" data-career="nc">
             <div class="career-company">
               <h3 class="career-company-name">NC</h3>
               <p class="career-meta">
@@ -92,13 +109,13 @@
               </p>
             </div>
             <div class="career-projects">
-              <div class="career-project">
+              <div class="career-project" data-project="varcoText">
                 <h4 class="career-project-title">VARCO Text</h4>
                 <p class="career-project-description">
                   UX/UI design for a Text-to-Text AI service specialized for game production
                 </p>
               </div>
-              <div class="career-project">
+              <div class="career-project" data-project="aiFinancial">
                 <h4 class="career-project-title">AI Financial Service</h4>
                 <p class="career-project-description">
                   UX/UI design for an MTS app prototype powered by financial AI
@@ -107,7 +124,7 @@
             </div>
           </article>
 
-          <article class="career-entry">
+          <article class="career-entry" data-career="webzen">
             <div class="career-company">
               <h3 class="career-company-name">Webzen</h3>
               <p class="career-meta">
@@ -119,37 +136,37 @@
               </p>
             </div>
             <div class="career-projects">
-              <div class="career-project">
+              <div class="career-project" data-project="community">
                 <h4 class="career-project-title">Webzen Community Site</h4>
                 <p class="career-project-description">
                   Built a mobile game community platform and improved UX
                 </p>
               </div>
-              <div class="career-project">
+              <div class="career-project" data-project="shotOnline">
                 <h4 class="career-project-title">Shot Online EU Website Renewal</h4>
                 <p class="career-project-description">
                   UX/UI design for the Shot Online Europe website renewal
                 </p>
               </div>
-              <div class="career-project">
+              <div class="career-project" data-project="remote">
                 <h4 class="career-project-title">Webzen Remote App</h4>
                 <p class="career-project-description">
                   UX/UI design for a mobile desktop game streaming app
                 </p>
               </div>
-              <div class="career-project">
+              <div class="career-project" data-project="payments">
                 <h4 class="career-project-title">Southeast Asia Payment Platform</h4>
                 <p class="career-project-description">
                   Built UX/UI for a payment platform targeting Southeast Asian markets
                 </p>
               </div>
-              <div class="career-project">
+              <div class="career-project" data-project="gameGuide">
                 <h4 class="career-project-title">Game Guide Website</h4>
                 <p class="career-project-description">
                   UX/UI design for Webzen game guide websites
                 </p>
               </div>
-              <div class="career-project">
+              <div class="career-project" data-project="masterTanker">
                 <h4 class="career-project-title">Master Tanker Official Website</h4>
                 <p class="career-project-description">
                   Built the official website for the mobile game Master Tanker
@@ -158,7 +175,7 @@
             </div>
           </article>
 
-          <article class="career-entry">
+          <article class="career-entry" data-career="media4th">
             <div class="career-company">
               <h3 class="career-company-name">Media4th One</h3>
               <p class="career-meta">
@@ -170,35 +187,35 @@
               </p>
             </div>
             <div class="career-projects">
-              <div class="career-project">
+              <div class="career-project" data-project="sm">
                 <h4 class="career-project-title">SM Entertainment Website Proposal</h4>
                 <p class="career-project-description">
                   Independently led UI design for a website renewal proposal
                 </p>
               </div>
-              <div class="career-project">
+              <div class="career-project" data-project="shotOnline">
                 <h4 class="career-project-title">Shot Online EU Website Renewal</h4>
                 <p class="career-project-description">
                   Designed subpages for a website build project
                 </p>
               </div>
-              <div class="career-project">
+              <div class="career-project" data-project="dragonNest">
                 <h4 class="career-project-title">Dragon Nest Website</h4>
                 <p class="career-project-description">Designed UI for brand website subpages</p>
               </div>
-              <div class="career-project">
+              <div class="career-project" data-project="renault">
                 <h4 class="career-project-title">Renault Samsung Website Renewal Proposal</h4>
                 <p class="career-project-description">
                   Developed a website renewal proposal and UI resources
                 </p>
               </div>
-              <div class="career-project">
+              <div class="career-project" data-project="paradise">
                 <h4 class="career-project-title">Paradise City Website</h4>
                 <p class="career-project-description">
                   UX/UI design for a multilingual website and subpages
                 </p>
               </div>
-              <div class="career-project">
+              <div class="career-project" data-project="ktng">
                 <h4 class="career-project-title">KT&amp;G Website Accessibility Improvement</h4>
                 <p class="career-project-description">
                   Improved accessibility of the English site to meet WCAG 2.0 standards
@@ -211,7 +228,7 @@
 
       <footer class="site-footer" data-reveal>
         <span>&copy; 2026 Tayhoon Kim</span>
-        <a class="footer-contact" href="contact.html">Contact</a>
+        <a class="footer-contact" href="contact.html" data-i18n="common.contact">Contact</a>
       </footer>
     </div>
   </body>

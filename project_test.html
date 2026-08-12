@@ -6,62 +6,75 @@
     <meta name="description" content="Tempo project detail" />
     <title>Tempo | Tayhoon Kim</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css?v=20260616" />
-    <script src="app.js?v=20260615" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20260813" />
+    <script type="module" src="app.js?v=20260813"></script>
   </head>
-  <body class="page-project">
+  <body class="page-project" data-page="project">
     <div class="page">
       <header class="site-header" data-reveal="header">
         <a class="site-title" href="index.html" aria-label="Tayhoon Kim">TAYHOON KIM</a>
 
         <nav class="site-nav" aria-label="Primary navigation">
-          <a href="index.html#about">About</a>
-          <a href="works.html" aria-current="page">Works</a>
-          <a href="contact.html">Contact</a>
-          <button class="language-toggle" type="button">
-            <span class="language-current">KR</span>
+          <a href="index.html#about" data-i18n="common.about">About</a>
+          <a href="works.html" aria-current="page" data-i18n="common.works">Works</a>
+          <a href="contact.html" data-i18n="common.contact">Contact</a>
+          <button
+            class="language-toggle"
+            type="button"
+            data-language-toggle
+            data-i18n-aria-label="common.switchLanguage"
+          >
+            <span class="language-current" data-i18n="common.language">KR</span>
           </button>
         </nav>
       </header>
 
       <main class="project-main" aria-label="Project detail">
         <figure class="project-media project-media-full project-cover" data-scroll-reveal>
-          <video autoplay loop muted playsinline aria-label="Tempo hero motion">
-            <source
-              src="https://studiodumbar.com/media/pages/work/tempo/096e56600a-1781597608/01.mp4"
-              type="video/mp4"
-            />
+          <video
+            loop
+            muted
+            playsinline
+            preload="none"
+            poster="assets/media/tempo/posters/01.jpg"
+            aria-label="Tempo hero motion"
+          >
+            <source src="assets/media/tempo/01.mp4" type="video/mp4" />
           </video>
         </figure>
 
         <section class="project-hero" data-reveal>
-          <h1 class="project-title">
+          <h1 class="project-title" data-i18n="pages.project.projectTitle">
             Tempo &mdash; Brand identity for a blockchain that is redefining the future of global
             payments
           </h1>
         </section>
 
         <section class="project-meta" aria-label="Project services" data-scroll-reveal>
-          <p class="project-meta-label">Services</p>
+          <p class="project-meta-label" data-i18n="pages.project.servicesLabel">Services</p>
           <ul class="project-meta-list">
-            <li>Motion</li>
-            <li>Visual identity</li>
-            <li>Sound</li>
-            <li>Interactive</li>
+            <li data-i18n="pages.project.services.motion">Motion</li>
+            <li data-i18n="pages.project.services.visualIdentity">Visual identity</li>
+            <li data-i18n="pages.project.services.sound">Sound</li>
+            <li data-i18n="pages.project.services.interactive">Interactive</li>
           </ul>
         </section>
 
         <figure class="project-media project-media-full" data-scroll-reveal>
-          <video autoplay loop muted playsinline aria-label="Tempo identity motion">
-            <source
-              src="https://studiodumbar.com/media/pages/work/tempo/6f80d77b65-1781597654/02.mp4"
-              type="video/mp4"
-            />
+          <video
+            loop
+            muted
+            playsinline
+            preload="none"
+            poster="assets/media/tempo/posters/02.jpg"
+            aria-label="Tempo identity motion"
+          >
+            <source src="assets/media/tempo/02.mp4" type="video/mp4" />
           </video>
         </figure>
 
         <section class="project-intro" data-scroll-reveal>
-          <p>
+          <p data-i18n="pages.project.intro">
             Founded by Paradigm and Stripe, Tempo is a blockchain for real world payments that is
             destined to set new standards in the industry. Designed specifically for stablecoin
             transactions, Tempo delivers the speed, efficiency, and scalability required for global
@@ -71,8 +84,8 @@
 
         <section class="project-story" aria-label="Project story">
           <article class="project-story-block" data-scroll-reveal>
-            <h2>Strategy</h2>
-            <p>
+            <h2 data-i18n="pages.project.stories.strategy.title">Strategy</h2>
+            <p data-i18n="pages.project.stories.strategy.description">
               Humble in its role as a provider yet confident in its potential, Tempo will play a
               defining role in the future of global payments. The brand needed to feel outspoken and
               distinctive while remaining direct, grounded, and ready for developers, entrepreneurs,
@@ -81,8 +94,8 @@
           </article>
 
           <article class="project-story-block" data-scroll-reveal>
-            <h2>Design</h2>
-            <p>
+            <h2 data-i18n="pages.project.stories.design.title">Design</h2>
+            <p data-i18n="pages.project.stories.design.description">
               Tempo's foundation of speed and advanced technology shaped the identity. A standalone
               T supports the wordmark, while a custom Tempo typeface and tailor-made software expand
               letterforms from regular to extremely wide, echoing the movement of cross-border
@@ -91,8 +104,8 @@
           </article>
 
           <article class="project-story-block" data-scroll-reveal>
-            <h2>Results</h2>
-            <p>
+            <h2 data-i18n="pages.project.stories.results.title">Results</h2>
+            <p data-i18n="pages.project.stories.results.description">
               The identity embodies a product built to redefine the future of money transfers. A
               comprehensive package of motion, sound, design software, guidelines, and digital
               assets gives in-house teams a cohesive but flexible visual language.
@@ -101,97 +114,138 @@
         </section>
 
         <figure class="project-media project-media-full" data-scroll-reveal>
-          <video autoplay loop muted playsinline aria-label="Tempo motion system">
-            <source
-              src="https://studiodumbar.com/media/pages/work/tempo/bfd4142e55-1781597733/03.mp4"
-              type="video/mp4"
-            />
+          <video
+            loop
+            muted
+            playsinline
+            preload="none"
+            poster="assets/media/tempo/posters/03.jpg"
+            aria-label="Tempo motion system"
+          >
+            <source src="assets/media/tempo/03.mp4" type="video/mp4" />
           </video>
         </figure>
 
         <div class="project-media-grid">
           <figure class="project-media" data-scroll-reveal>
-            <video autoplay loop muted playsinline aria-label="Tempo motion detail">
-              <source
-                src="https://studiodumbar.com/media/pages/work/tempo/5cd9b491e0-1781597791/04.mp4"
-                type="video/mp4"
-              />
+            <video
+              loop
+              muted
+              playsinline
+              preload="none"
+              poster="assets/media/tempo/posters/04.jpg"
+              aria-label="Tempo motion detail"
+            >
+              <source src="assets/media/tempo/04.mp4" type="video/mp4" />
             </video>
           </figure>
           <figure class="project-media" data-scroll-reveal>
-            <video autoplay loop muted playsinline aria-label="Tempo graphic detail">
-              <source
-                src="https://studiodumbar.com/media/pages/work/tempo/583e642764-1781597802/05.mp4"
-                type="video/mp4"
-              />
+            <video
+              loop
+              muted
+              playsinline
+              preload="none"
+              poster="assets/media/tempo/posters/05.jpg"
+              aria-label="Tempo graphic detail"
+            >
+              <source src="assets/media/tempo/05.mp4" type="video/mp4" />
             </video>
           </figure>
         </div>
 
         <figure class="project-media project-media-full" data-scroll-reveal>
-          <video autoplay loop muted playsinline aria-label="Tempo composition motion">
-            <source
-              src="https://studiodumbar.com/media/pages/work/tempo/7548a00012-1781597822/06.mp4"
-              type="video/mp4"
-            />
+          <video
+            loop
+            muted
+            playsinline
+            preload="none"
+            poster="assets/media/tempo/posters/06.jpg"
+            aria-label="Tempo composition motion"
+          >
+            <source src="assets/media/tempo/06.mp4" type="video/mp4" />
           </video>
         </figure>
 
         <figure class="project-media project-media-full" data-scroll-reveal>
           <img
-            src="https://studiodumbar.com/media/pages/work/tempo/9b554ef0f3-1781597840/07.png"
-            alt=""
+            src="assets/media/tempo/07.png"
+            alt="Tempo brand identity compositions"
+            loading="lazy"
+            decoding="async"
+            data-i18n-alt="pages.project.images.composition"
           />
         </figure>
 
         <div class="project-media-grid">
           <figure class="project-media" data-scroll-reveal>
-            <video autoplay loop muted playsinline aria-label="Tempo application motion">
-              <source
-                src="https://studiodumbar.com/media/pages/work/tempo/7cbaab7798-1781597857/08.mp4"
-                type="video/mp4"
-              />
+            <video
+              loop
+              muted
+              playsinline
+              preload="none"
+              poster="assets/media/tempo/posters/08.jpg"
+              aria-label="Tempo application motion"
+            >
+              <source src="assets/media/tempo/08.mp4" type="video/mp4" />
             </video>
           </figure>
           <figure class="project-media" data-scroll-reveal>
-            <video autoplay loop muted playsinline aria-label="Tempo sound and motion">
-              <source
-                src="https://studiodumbar.com/media/pages/work/tempo/79984b61d4-1781597867/09.mp4"
-                type="video/mp4"
-              />
+            <video
+              loop
+              muted
+              playsinline
+              preload="none"
+              poster="assets/media/tempo/posters/09.jpg"
+              aria-label="Tempo sound and motion"
+            >
+              <source src="assets/media/tempo/09.mp4" type="video/mp4" />
             </video>
           </figure>
         </div>
 
         <figure class="project-media project-media-full" data-scroll-reveal>
-          <video autoplay loop muted playsinline aria-label="Tempo brand motion">
-            <source
-              src="https://studiodumbar.com/media/pages/work/tempo/51eb5ef541-1781597887/10.mp4"
-              type="video/mp4"
-            />
+          <video
+            loop
+            muted
+            playsinline
+            preload="none"
+            poster="assets/media/tempo/posters/10.jpg"
+            aria-label="Tempo brand motion"
+          >
+            <source src="assets/media/tempo/10.mp4" type="video/mp4" />
           </video>
         </figure>
 
         <figure class="project-media project-media-full" data-scroll-reveal>
-          <video autoplay loop muted playsinline aria-label="Tempo final motion">
-            <source
-              src="https://studiodumbar.com/media/pages/work/tempo/6d131fa25d-1781597908/11.mp4"
-              type="video/mp4"
-            />
+          <video
+            loop
+            muted
+            playsinline
+            preload="none"
+            poster="assets/media/tempo/posters/11.jpg"
+            aria-label="Tempo final motion"
+          >
+            <source src="assets/media/tempo/11.mp4" type="video/mp4" />
           </video>
         </figure>
 
         <div class="project-media-grid">
           <figure class="project-media" data-scroll-reveal>
             <img
-              src="https://studiodumbar.com/media/pages/work/tempo/ac1cbb3aa3-1781597928/12.png"
-              alt=""
+              src="assets/media/tempo/12.png"
+              alt="Tempo brand applications"
+              loading="lazy"
+              decoding="async"
+              data-i18n-alt="pages.project.images.applications"
             />
           </figure>
           <figure class="project-media" data-scroll-reveal>
             <img
-              src="https://studiodumbar.com/media/pages/work/tempo/06b1762bbd-1781682521/03-mobile.png"
-              alt=""
+              src="assets/media/tempo/03-mobile.png"
+              alt="Tempo mobile brand application"
+              loading="lazy"
+              decoding="async"
+              data-i18n-alt="pages.project.images.mobile"
             />
           </figure>
         </div>
@@ -199,7 +253,7 @@
 
       <footer class="site-footer" data-reveal>
         <span>&copy; 2026 Tayhoon Kim</span>
-        <a class="footer-contact" href="contact.html">Contact</a>
+        <a class="footer-contact" href="contact.html" data-i18n="common.contact">Contact</a>
       </footer>
     </div>
   </body>

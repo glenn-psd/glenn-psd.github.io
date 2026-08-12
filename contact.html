@@ -6,44 +6,58 @@
     <meta name="description" content="Contact Tayhoon Kim" />
     <title>Contact | Tayhoon Kim</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css?v=20260616" />
-    <script src="app.js?v=20260615" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20260813-9" />
+    <script type="module" src="app.js?v=20260813-3"></script>
   </head>
-  <body class="page-contact">
+  <body class="page-contact" data-page="contact">
     <div class="page">
       <header class="site-header" data-reveal="header">
         <a class="site-title" href="index.html" aria-label="Tayhoon Kim">TAYHOON KIM</a>
 
         <nav class="site-nav" aria-label="Primary navigation">
-          <a href="index.html#about">About</a>
-          <a href="works.html">Works</a>
-          <a href="contact.html" aria-current="page">Contact</a>
-          <button class="language-toggle" type="button">
-            <span class="language-current">KR</span>
+          <a href="index.html#about" data-i18n="common.about">About</a>
+          <a href="works.html" data-i18n="common.works">Works</a>
+          <a href="contact.html" aria-current="page" data-i18n="common.contact">Contact</a>
+          <button
+            class="language-toggle"
+            type="button"
+            data-language-toggle
+            data-i18n-aria-label="common.switchLanguage"
+          >
+            <span class="language-current" data-i18n="common.language">KR</span>
           </button>
         </nav>
       </header>
 
       <main class="contact-main" aria-labelledby="contact-title">
         <div class="contact-body">
-          <h1 class="contact-title" id="contact-title" data-reveal>
+          <h1
+            class="contact-title"
+            id="contact-title"
+            data-reveal
+            data-i18n="pages.contact.heading"
+          >
             Open to thoughtful projects and good conversations.
           </h1>
 
           <div class="contact-list" aria-label="Contact">
-            <p class="contact-label" data-reveal>Contact</p>
+            <p class="contact-label" data-reveal data-i18n="pages.contact.label">Contact</p>
             <ul class="contact-links" data-reveal>
               <li>
-                <a href="mailto:glenn@gmail.com" data-copy-email="glenn@gmail.com"
-                  >glenn@gmail.com</a
+                <button
+                  class="contact-email-button"
+                  type="button"
+                  data-copy-email="glenn.psd@gmail.com"
                 >
+                  glenn.psd@gmail.com
+                </button>
               </li>
               <li>
                 <a
                   href="https://www.instagram.com/glenn_psd/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >Instagram</a
+                  >Instagram↗</a
                 >
               </li>
               <li>
@@ -51,7 +65,7 @@
                   href="https://www.linkedin.com/in/tayhoon-kim/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >Linkedin</a
+                  >Linkedin↗</a
                 >
               </li>
             </ul>
@@ -63,7 +77,10 @@
         </footer>
       </main>
 
-      <div class="copy-toast" role="status" aria-live="polite" hidden>Copied.</div>
+      <div class="copy-toast" role="status" aria-live="polite" data-i18n="common.copied" hidden>
+        Copied.
+      </div>
+      <span class="copy-tooltip" aria-hidden="true">Copy</span>
     </div>
   </body>
 </html>
